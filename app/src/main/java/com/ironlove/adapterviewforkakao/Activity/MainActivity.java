@@ -8,8 +8,6 @@ import android.widget.Button;
 
 import com.ironlove.adapterviewforkakao.Data.GettyImage;
 import com.ironlove.adapterviewforkakao.R;
-import com.nostra13.universalimageloader.core.ImageLoader;
-import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 
 import java.util.ArrayList;
 
@@ -29,8 +27,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnListView01.setOnClickListener(this);
         btnGridView01.setOnClickListener(this);
 
-        ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(this).build();
-        ImageLoader.getInstance().init(config);
 
     }
 

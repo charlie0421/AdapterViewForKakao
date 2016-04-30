@@ -72,7 +72,7 @@ public class ImageParseFromGettyImageTask extends AsyncTask<String, Void, ArrayL
         progress.dismiss();
         Toast.makeText(activity, "HTML 파싱 완료", Toast.LENGTH_SHORT).show();
         activity.mListData.addAll(list);
-        activity.mAdapter.notifyDataSetChanged();
+        activity.mArrayAdapter.notifyDataSetChanged();
     }
 
     @Override
