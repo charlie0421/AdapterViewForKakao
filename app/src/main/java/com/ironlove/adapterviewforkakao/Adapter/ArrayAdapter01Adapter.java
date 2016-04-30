@@ -44,19 +44,18 @@ public class ArrayAdapter01Adapter extends ArrayAdapter<GettyImage> {
             holder.ivImage = (ImageView) convertView.findViewById(R.id.ivImage);
 
             convertView.setTag(holder);
+            holder.position = position;
 
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
 
-        holder.position = position;
-
-        final GettyImage list_data = items.get(position);
+        final GettyImage list_data = items.get(holder.position);
 
         if (list_data != null) {
 
             holder.tvTitle.setText(list_data.strCaption);
-            if (mActvity.mIsScrolling == false)
+            if (!mActvity.mIsScrolling)
                 ImageLoader.getInstance().displayImage(list_data.strURL, holder.ivImage);
 
         }

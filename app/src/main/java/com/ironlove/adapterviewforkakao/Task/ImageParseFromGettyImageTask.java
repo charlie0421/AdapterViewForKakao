@@ -17,9 +17,6 @@ import org.jsoup.select.Elements;
 
 import java.util.ArrayList;
 
-/**
- * Created by lineplay on 16. 4. 30..
- */
 public class ImageParseFromGettyImageTask extends AsyncTask<String, Void, ArrayList<GettyImage>> {
 
     ProgressDialog progress;
@@ -39,7 +36,7 @@ public class ImageParseFromGettyImageTask extends AsyncTask<String, Void, ArrayL
     @Override
     protected ArrayList<GettyImage> doInBackground(String... strings) {
 
-        ArrayList<GettyImage> list = new ArrayList<GettyImage>();
+        ArrayList<GettyImage> list = new ArrayList<>();
 
         try {
             Document doc = Jsoup.connect(strings[0]).get();
@@ -71,6 +68,7 @@ public class ImageParseFromGettyImageTask extends AsyncTask<String, Void, ArrayL
         super.onPostExecute(list);
         progress.dismiss();
         Toast.makeText(activity, "HTML 파싱 완료", Toast.LENGTH_SHORT).show();
+        activity.mListData.clear();
         activity.mListData.addAll(list);
         activity.mArrayAdapter.notifyDataSetChanged();
     }

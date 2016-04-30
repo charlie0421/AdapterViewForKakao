@@ -6,10 +6,11 @@
 
     <ImageView
         android:id="@+id/ivImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="86dp"
+        android:layout_height="86dp"
         android:layout_gravity="center"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        android:contentDescription="@string/thumbnail" />
 
     <TextView
         android:id="@+id/tvTitle"
@@ -17,5 +18,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_weight="1"
-        android:text="title" />
+        android:text=""
+        android:visibility="gone" />
+
 </LinearLayout>
