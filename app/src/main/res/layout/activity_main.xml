@@ -11,24 +11,42 @@
 
     <Button
         android:id="@+id/btnListView01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/etURL"
+        android:text="@string/string_btn_listview01" />
+
+    <Button
+        android:id="@+id/btnGridView01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnListView01"
+        android:layout_alignStart="@+id/btnListView01"
+        android:layout_below="@+id/btnListView01"
+        android:layout_margin="0dp"
+        android:text="@string/string_btn_gridview01" />
+
+    <EditText
+        android:id="@+id/etURL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView"
+        android:editable="false"
+        android:singleLine="false"
+        android:text="@string/string_default_url" />
+
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="33dp"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="47dp"
-        android:text="@string/btnListView01" />
-
-    <Button
-        android:id="@+id/btnGridView01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/btnListView01"
-        android:layout_alignStart="@+id/btnListView01"
-        android:layout_below="@+id/btnListView01"
-        android:layout_marginTop="31dp"
-        android:text="@string/btnGridView01" />
+        android:text="@string/string_url"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>

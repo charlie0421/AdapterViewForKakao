@@ -1,5 +1,6 @@
 package com.ironlove.adapterviewforkakao.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -19,8 +20,10 @@ public class GridView01Activity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grid_view01);
 
+        Intent intent = getIntent();
+        String strURL = intent.getStringExtra("URL");
         ImageParseFromGettyImageTask task = new ImageParseFromGettyImageTask(this);
-        task.execute("http://www.gettyimagesgallery.com/collections/archive/slim-aarons.aspx");
+        task.execute(strURL);
 
         mAbsListView = (GridView) findViewById(R.id.gridview);
         mArrayAdapter = new ArrayAdapter01Adapter(
@@ -30,7 +33,7 @@ public class GridView01Activity extends BaseActivity {
         mAbsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(mContext, mListData.get(position).strCaption + "," + mListData.get(position).strURL, Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext, mListData.get(position).strCaption, Toast.LENGTH_SHORT).show();
             }
         });
         PauseOnScrollListener listener = new PauseOnScrollListener(ImageLoader.getInstance(), true, true);

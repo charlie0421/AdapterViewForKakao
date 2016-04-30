@@ -1,5 +1,6 @@
 package com.ironlove.adapterviewforkakao.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -13,14 +14,16 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.listener.PauseOnScrollListener;
 
 public class ListView01Activity extends BaseActivity {
-    public final static String TAG = "ListView01Activity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_view01);
+
+        Intent intent = getIntent();
+        String strURL = intent.getStringExtra("URL");
         ImageParseFromGettyImageTask task = new ImageParseFromGettyImageTask(this);
-        task.execute("http://www.gettyimagesgallery.com/collections/archive/slim-aarons.aspx");
+        task.execute(strURL);
 
         mAbsListView = (ListView) findViewById(R.id.listView);
         mArrayAdapter = new ArrayAdapter01Adapter(

@@ -7,7 +7,6 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.ironlove.adapterviewforkakao.Activity.BaseActivity;
-import com.ironlove.adapterviewforkakao.Activity.ListView01Activity;
 import com.ironlove.adapterviewforkakao.Item.GettyImage;
 
 import org.jsoup.Jsoup;
@@ -18,7 +17,7 @@ import org.jsoup.select.Elements;
 import java.util.ArrayList;
 
 public class ImageParseFromGettyImageTask extends AsyncTask<String, Void, ArrayList<GettyImage>> {
-
+    private final String TAG = getClass().getName();
     private final ProgressDialog progress;
     private final BaseActivity activity;
 
@@ -43,7 +42,7 @@ public class ImageParseFromGettyImageTask extends AsyncTask<String, Void, ArrayL
             Uri uri = Uri.parse(strings[0]);
             String path = uri.getScheme() + "://" + uri.getHost();
             String title = doc.title();
-            Log.d(ListView01Activity.TAG, "Title [" + title + "]");
+            Log.d(TAG, "Title [" + title + "]");
 
             Elements elements = doc.select(".gallery-item-group.exitemrepeater");
             for (Element element : elements) {
@@ -58,7 +57,7 @@ public class ImageParseFromGettyImageTask extends AsyncTask<String, Void, ArrayL
         } catch (Throwable t) {
             t.printStackTrace();
         }
-        Log.d(ListView01Activity.TAG, "파싱완료");
+        Log.d(TAG, "파싱완료");
 
         return list;
     }

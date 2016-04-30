@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">AdapterViewForKakao</string>
-    <string name="thumbnail">thumbnail</string>
-    <string name="btnListView01">리스트뷰 예제</string>
-    <string name="btnGridView01">그리드뷰 예제</string>
+    <string name="string_thumbnail">thumbnail</string>
+    <string name="string_btn_listview01">리스트뷰 예제</string>
+    <string name="string_btn_gridview01">그리드뷰 예제</string>
+    <string name="string_url">URL</string>
+    <string name="string_default_url">http://www.gettyimagesgallery.com/collections/archive/slim-aarons.aspx</string>
+
 </resources>

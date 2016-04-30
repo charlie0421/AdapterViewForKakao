@@ -10,7 +10,7 @@
         android:layout_height="86dp"
         android:layout_gravity="center"
         android:layout_weight="1"
-        android:contentDescription="@string/thumbnail" />
+        android:contentDescription="@string/string_thumbnail" />
 
     <TextView
         android:id="@+id/tvTitle"
