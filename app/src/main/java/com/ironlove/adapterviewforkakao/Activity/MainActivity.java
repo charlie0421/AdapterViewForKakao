@@ -6,33 +6,21 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import com.ironlove.adapterviewforkakao.Item.GettyImage;
 import com.ironlove.adapterviewforkakao.R;
 
-import java.util.ArrayList;
-
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-
-    Button btnListView01;
-    Button btnGridView01;
-    private ArrayList<GettyImage> mGettyImageList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnListView01 = (Button) findViewById(R.id.btnListView01);
-        btnGridView01 = (Button) findViewById(R.id.btnGridView01);
-        btnListView01.setOnClickListener(this);
-        btnGridView01.setOnClickListener(this);
-
-
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
+        Button btnListView01 = (Button) findViewById(R.id.btnListView01);
+        Button btnGridView01 = (Button) findViewById(R.id.btnGridView01);
+        if (btnListView01 != null)
+            btnListView01.setOnClickListener(this);
+        if (btnGridView01 != null)
+            btnGridView01.setOnClickListener(this);
 
 
     }

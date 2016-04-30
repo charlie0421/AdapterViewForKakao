@@ -11,12 +11,11 @@ import com.ironlove.adapterviewforkakao.Item.GettyImage;
 import java.util.ArrayList;
 
 public class BaseActivity extends AppCompatActivity {
-    public ArrayList<GettyImage> mListData = new ArrayList<>();
+    public final ArrayList<GettyImage> mListData = new ArrayList<>();
     public ArrayAdapter<GettyImage> mArrayAdapter;
-    public AbsListView mAbsListView;
-    public BaseActivity mActivity;
-    public Context mContext;
-    public boolean mIsScrolling = false;
+    AbsListView mAbsListView;
+    BaseActivity mActivity;
+    Context mContext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

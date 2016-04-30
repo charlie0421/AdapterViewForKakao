@@ -19,7 +19,7 @@
         android:layout_marginLeft="33dp"
         android:layout_marginStart="33dp"
         android:layout_marginTop="47dp"
-        android:text="ListView 예제" />
+        android:text="@string/btnListView01" />
 
     <Button
         android:id="@+id/btnGridView01"
@@ -29,6 +29,6 @@
         android:layout_alignStart="@+id/btnListView01"
         android:layout_below="@+id/btnListView01"
         android:layout_marginTop="31dp"
-        android:text="GridView 예제" />
+        android:text="@string/btnGridView01" />
 
 </RelativeLayout>

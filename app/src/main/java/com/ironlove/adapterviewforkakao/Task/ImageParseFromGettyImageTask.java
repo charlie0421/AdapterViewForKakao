@@ -19,8 +19,8 @@ import java.util.ArrayList;
 
 public class ImageParseFromGettyImageTask extends AsyncTask<String, Void, ArrayList<GettyImage>> {
 
-    ProgressDialog progress;
-    private BaseActivity activity;
+    private final ProgressDialog progress;
+    private final BaseActivity activity;
 
     public ImageParseFromGettyImageTask(BaseActivity activity) {
         this.activity = activity;

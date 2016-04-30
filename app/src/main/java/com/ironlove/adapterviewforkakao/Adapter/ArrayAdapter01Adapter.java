@@ -17,16 +17,12 @@ import java.util.ArrayList;
 
 public class ArrayAdapter01Adapter extends ArrayAdapter<GettyImage> {
     private final String TAG = getClass().getName();
-    private final BaseActivity mActvity;
-    private final Context mContext;
     private final int resource;
-    private ArrayList<GettyImage> items;
+    private final ArrayList<GettyImage> items;
 
 
     public ArrayAdapter01Adapter(BaseActivity activity, Context context, int resource, ArrayList<GettyImage> items) {
         super(context, resource, items);
-        this.mActvity = activity;
-        this.mContext = context;
         this.resource = resource;
         this.items = items;
     }
