@@ -12,8 +12,9 @@ public class Application extends android.app.Application {
                 .showImageOnLoading(R.drawable.kakao_logo)
                 .showImageOnFail(R.drawable.loading_fail)
                 .showImageForEmptyUri(R.drawable.loading_fail)
-                .cacheInMemory(false)
-                .cacheOnDisk(false)
+                .cacheInMemory(true)
+                .cacheOnDisk(true)
+                //.resetViewBeforeLoading(true)
                 .build();
         ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(this)
                 .defaultDisplayImageOptions(options)

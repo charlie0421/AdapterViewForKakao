@@ -1,4 +1,4 @@
-package com.ironlove.adapterviewforkakao.Data;
+package com.ironlove.adapterviewforkakao.Item;
 
 public class GettyImage {
     public String strURL;

@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import com.ironlove.adapterviewforkakao.Data.GettyImage;
+import com.ironlove.adapterviewforkakao.Item.GettyImage;
 import com.ironlove.adapterviewforkakao.R;
 
 import java.util.ArrayList;
@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     Button btnListView01;
     Button btnGridView01;
-    private ArrayList<GettyImage> mGettyImageList = new ArrayList<GettyImage>();
+    private ArrayList<GettyImage> mGettyImageList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        Intent intent = null;
+        Intent intent;
         switch (v.getId())
 
         {

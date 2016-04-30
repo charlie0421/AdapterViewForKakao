@@ -9,22 +9,23 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.ironlove.adapterviewforkakao.Activity.BaseActivity;
-import com.ironlove.adapterviewforkakao.Data.GettyImage;
+import com.ironlove.adapterviewforkakao.Item.GettyImage;
 import com.ironlove.adapterviewforkakao.R;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
 import java.util.ArrayList;
 
 public class ArrayAdapter01Adapter extends ArrayAdapter<GettyImage> {
+    private final String TAG = getClass().getName();
     private final BaseActivity mActvity;
     private final Context mContext;
     private final int resource;
     private ArrayList<GettyImage> items;
 
 
-    public ArrayAdapter01Adapter(BaseActivity mActvity, Context context, int resource, ArrayList<GettyImage> items) {
+    public ArrayAdapter01Adapter(BaseActivity activity, Context context, int resource, ArrayList<GettyImage> items) {
         super(context, resource, items);
-        this.mActvity = mActvity;
+        this.mActvity = activity;
         this.mContext = context;
         this.resource = resource;
         this.items = items;
@@ -44,19 +45,16 @@ public class ArrayAdapter01Adapter extends ArrayAdapter<GettyImage> {
             holder.ivImage = (ImageView) convertView.findViewById(R.id.ivImage);
 
             convertView.setTag(holder);
-            holder.position = position;
-
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
 
-        final GettyImage list_data = items.get(holder.position);
+        GettyImage list_data = items.get(position);
 
         if (list_data != null) {
 
             holder.tvTitle.setText(list_data.strCaption);
-            if (!mActvity.mIsScrolling)
-                ImageLoader.getInstance().displayImage(list_data.strURL, holder.ivImage);
+            ImageLoader.getInstance().displayImage(list_data.strURL, holder.ivImage);
 
         }
 
@@ -64,7 +62,6 @@ public class ArrayAdapter01Adapter extends ArrayAdapter<GettyImage> {
     }
 
     private static class ViewHolder {
-        public int position;
         public ImageView ivImage;
         public TextView tvTitle;
     }

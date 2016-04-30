@@ -8,7 +8,7 @@ import android.widget.Toast;
 
 import com.ironlove.adapterviewforkakao.Activity.BaseActivity;
 import com.ironlove.adapterviewforkakao.Activity.ListView01Activity;
-import com.ironlove.adapterviewforkakao.Data.GettyImage;
+import com.ironlove.adapterviewforkakao.Item.GettyImage;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;

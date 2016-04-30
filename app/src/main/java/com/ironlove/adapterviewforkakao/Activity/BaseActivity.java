@@ -6,12 +6,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.AbsListView;
 import android.widget.ArrayAdapter;
 
-import com.ironlove.adapterviewforkakao.Data.GettyImage;
+import com.ironlove.adapterviewforkakao.Item.GettyImage;
 
 import java.util.ArrayList;
 
 public class BaseActivity extends AppCompatActivity {
-    public ArrayList<GettyImage> mListData = new ArrayList<GettyImage>();
+    public ArrayList<GettyImage> mListData = new ArrayList<>();
     public ArrayAdapter<GettyImage> mArrayAdapter;
     public AbsListView mAbsListView;
     public BaseActivity mActivity;
