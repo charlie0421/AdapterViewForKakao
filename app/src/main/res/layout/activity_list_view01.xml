@@ -7,28 +7,14 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.ironlove.adapterviewforkakao.MainActivity">
+    tools:context="com.ironlove.adapterviewforkakao.ListView01Activity">
 
-    <Button
-        android:id="@+id/btnListView01"
+    <ListView
+        android:id="@+id/listView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="33dp"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="47dp"
-        android:text="ListView 예제" />
-
-    <Button
-        android:id="@+id/btnGridView01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/btnListView01"
-        android:layout_alignStart="@+id/btnListView01"
-        android:layout_below="@+id/btnListView01"
-        android:layout_marginTop="31dp"
-        android:text="GridView 예제" />
-
+        android:choiceMode="singleChoice" />
 </RelativeLayout>
