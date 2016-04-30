@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.ironlove.adapterviewforkakao.ListView01Activity">
+    tools:context=".Activity.ListView01Activity">
 
     <ListView
         android:id="@+id/listView"

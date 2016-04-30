@@ -1,4 +1,4 @@
-package com.ironlove.adapterviewforkakao;
+package com.ironlove.adapterviewforkakao.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,17 +8,19 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.ironlove.adapterviewforkakao.Data.GettyImage;
+import com.ironlove.adapterviewforkakao.R;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
 import java.util.ArrayList;
 
-public class ListView01Adapter extends ArrayAdapter<GettyImage> {
+public class AdapterView01Adapter extends ArrayAdapter<GettyImage> {
     private final Context context;
     private final int resource;
     private ArrayList<GettyImage> items;
 
 
-    public ListView01Adapter(Context context, int resource, ArrayList<GettyImage> items) {
+    public AdapterView01Adapter(Context context, int resource, ArrayList<GettyImage> items) {
         super(context, resource, items);
         this.context = context;
         this.resource = resource;

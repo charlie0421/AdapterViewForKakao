@@ -1,10 +1,14 @@
-package com.ironlove.adapterviewforkakao;
+package com.ironlove.adapterviewforkakao.Task;
 
 import android.app.ProgressDialog;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.Toast;
+
+import com.ironlove.adapterviewforkakao.Activity.BaseActivity;
+import com.ironlove.adapterviewforkakao.Activity.ListView01Activity;
+import com.ironlove.adapterviewforkakao.Data.GettyImage;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;

@@ -1,7 +1,11 @@
-package com.ironlove.adapterviewforkakao;
+package com.ironlove.adapterviewforkakao.Activity;
 
 import android.os.Bundle;
 import android.widget.GridView;
+
+import com.ironlove.adapterviewforkakao.Adapter.AdapterView01Adapter;
+import com.ironlove.adapterviewforkakao.R;
+import com.ironlove.adapterviewforkakao.Task.ImageParseFromGettyImageTask;
 
 public class GridView01Activity extends BaseActivity {
 
@@ -14,7 +18,7 @@ public class GridView01Activity extends BaseActivity {
         task.execute("http://www.gettyimagesgallery.com/collections/archive/slim-aarons.aspx");
 
         mAdapterView = (GridView) findViewById(R.id.gridview);
-        mAdapter = new ListView01Adapter(
+        mAdapter = new AdapterView01Adapter(
                 this, R.layout.layout_gridview01,
                 mListData);
         mAdapterView.setAdapter(mAdapter);
