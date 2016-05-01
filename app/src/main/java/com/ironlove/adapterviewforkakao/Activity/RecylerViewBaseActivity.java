@@ -3,19 +3,21 @@ package com.ironlove.adapterviewforkakao.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.RecyclerView;
 import android.widget.AbsListView;
-import android.widget.ArrayAdapter;
 
 import com.ironlove.adapterviewforkakao.Item.GettyImage;
 
 import java.util.ArrayList;
 
-public class BaseActivity extends AppCompatActivity {
+public class RecylerViewBaseActivity extends AppCompatActivity {
 
     public final ArrayList<GettyImage> mListData = new ArrayList<>();
-    public ArrayAdapter<GettyImage> mArrayAdapter;
-    AbsListView mAbsListView;
-    BaseActivity mActivity;
+    public RecyclerView.Adapter mAdapter;
+    protected RecyclerView mRecyclerView;
+    protected RecyclerView.LayoutManager mLayoutManager;
+    AbsListView mListView;
+    RecylerViewBaseActivity mActivity;
     Context mContext;
 
     @Override

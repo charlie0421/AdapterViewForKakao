@@ -20,13 +20,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         Button btnListView01 = (Button) findViewById(R.id.btnListView01);
+        Button btnListView02 = (Button) findViewById(R.id.btnListView02);
         Button btnGridView01 = (Button) findViewById(R.id.btnGridView01);
+        Button btnGridView02 = (Button) findViewById(R.id.btnGridView02);
         etURL = (EditText) findViewById(R.id.etURL);
 
         if (btnListView01 != null)
             btnListView01.setOnClickListener(this);
+        if (btnListView02 != null)
+            btnListView02.setOnClickListener(this);
         if (btnGridView01 != null)
             btnGridView01.setOnClickListener(this);
+        if (btnGridView02 != null)
+            btnGridView02.setOnClickListener(this);
 
 
     }
@@ -43,8 +49,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent);
                 Log.d(TAG, "URL:" + etURL.getText());
                 break;
+            case R.id.btnListView02:
+                intent = new Intent(this, ListView02Activity.class);
+                intent.putExtra("URL", etURL.getText().toString());
+                startActivity(intent);
+                Log.d(TAG, "URL:" + etURL.getText());
+                break;
             case R.id.btnGridView01:
                 intent = new Intent(this, GridView01Activity.class);
+                intent.putExtra("URL", etURL.getText().toString());
+                startActivity(intent);
+                Log.d(TAG, "URL:" + etURL.getText());
+                break;
+            case R.id.btnGridView02:
+                intent = new Intent(this, GridView02Activity.class);
                 intent.putExtra("URL", etURL.getText().toString());
                 startActivity(intent);
                 Log.d(TAG, "URL:" + etURL.getText());

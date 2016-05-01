@@ -1,12 +1,14 @@
 package com.ironlove.adapterviewforkakao.Task;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.ironlove.adapterviewforkakao.Activity.BaseActivity;
+import com.ironlove.adapterviewforkakao.Activity.AdapterViewBaseActivity;
+import com.ironlove.adapterviewforkakao.Activity.RecylerViewBaseActivity;
 import com.ironlove.adapterviewforkakao.Item.GettyImage;
 
 import org.jsoup.Jsoup;
@@ -19,9 +21,16 @@ import java.util.ArrayList;
 public class ImageParseFromGettyImageTask extends AsyncTask<String, Void, ArrayList<GettyImage>> {
     private final String TAG = getClass().getName();
     private final ProgressDialog progress;
-    private final BaseActivity activity;
+    private final Activity activity;
 
-    public ImageParseFromGettyImageTask(BaseActivity activity) {
+    public ImageParseFromGettyImageTask(AdapterViewBaseActivity activity) {
+        this.activity = activity;
+        progress = new ProgressDialog(activity);
+        progress.setMessage("파싱중");
+
+    }
+
+    public ImageParseFromGettyImageTask(RecylerViewBaseActivity activity) {
         this.activity = activity;
         progress = new ProgressDialog(activity);
         progress.setMessage("파싱중");
@@ -67,9 +76,15 @@ public class ImageParseFromGettyImageTask extends AsyncTask<String, Void, ArrayL
         super.onPostExecute(list);
         progress.dismiss();
         Toast.makeText(activity, "HTML 파싱 완료", Toast.LENGTH_SHORT).show();
-        activity.mListData.clear();
-        activity.mListData.addAll(list);
-        activity.mArrayAdapter.notifyDataSetChanged();
+        if (activity instanceof AdapterViewBaseActivity) {
+            ((AdapterViewBaseActivity) activity).mListData.clear();
+            ((AdapterViewBaseActivity) activity).mListData.addAll(list);
+            ((AdapterViewBaseActivity) activity).mArrayAdapter.notifyDataSetChanged();
+        } else if (activity instanceof RecylerViewBaseActivity) {
+            ((RecylerViewBaseActivity) activity).mListData.clear();
+            ((RecylerViewBaseActivity) activity).mListData.addAll(list);
+            ((RecylerViewBaseActivity) activity).mAdapter.notifyDataSetChanged();
+        }
     }
 
     @Override

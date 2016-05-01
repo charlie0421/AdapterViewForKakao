@@ -3,6 +3,8 @@
     <string name="string_thumbnail">thumbnail</string>
     <string name="string_btn_listview01">리스트뷰 예제</string>
     <string name="string_btn_gridview01">그리드뷰 예제</string>
+    <string name="string_btn_listview02">리스트뷰(RecyclerView) 예제</string>
+    <string name="string_btn_gridview02">그리드뷰(RecyclerView) 예제</string>
     <string name="string_url">URL</string>
     <string name="string_default_url">http://www.gettyimagesgallery.com/collections/archive/slim-aarons.aspx</string>
 

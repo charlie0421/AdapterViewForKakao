@@ -13,7 +13,7 @@ import com.ironlove.adapterviewforkakao.Task.ImageParseFromGettyImageTask;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.listener.PauseOnScrollListener;
 
-public class GridView01Activity extends BaseActivity {
+public class GridView01Activity extends AdapterViewBaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,4 +40,5 @@ public class GridView01Activity extends BaseActivity {
         mAbsListView.setOnScrollListener(listener);
 
     }
+
 }

@@ -8,7 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.ironlove.adapterviewforkakao.Activity.BaseActivity;
+import com.ironlove.adapterviewforkakao.Activity.AdapterViewBaseActivity;
 import com.ironlove.adapterviewforkakao.Item.GettyImage;
 import com.ironlove.adapterviewforkakao.R;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -21,7 +21,7 @@ public class ArrayAdapter01Adapter extends ArrayAdapter<GettyImage> {
     private final ArrayList<GettyImage> items;
 
 
-    public ArrayAdapter01Adapter(BaseActivity activity, Context context, int resource, ArrayList<GettyImage> items) {
+    public ArrayAdapter01Adapter(AdapterViewBaseActivity activity, Context context, int resource, ArrayList<GettyImage> items) {
         super(context, resource, items);
         this.resource = resource;
         this.items = items;

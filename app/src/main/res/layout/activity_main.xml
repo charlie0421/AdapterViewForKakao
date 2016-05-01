@@ -34,8 +34,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView"
-        android:editable="false"
         android:singleLine="false"
         android:text="@string/string_default_url" />
 
@@ -48,5 +46,23 @@
         android:layout_alignParentTop="true"
         android:text="@string/string_url"
         android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/btnGridView02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btnListView02"
+        android:text="@string/string_btn_gridview02" />
+
+    <Button
+        android:id="@+id/btnListView02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btnGridView01"
+        android:text="@string/string_btn_listview02" />
 
 </RelativeLayout>

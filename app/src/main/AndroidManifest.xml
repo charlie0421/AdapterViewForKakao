@@ -22,7 +22,9 @@
         </activity>
         <activity android:name=".Activity.ListView01Activity" />
         <activity android:name=".Activity.GridView01Activity" />
-        <activity android:name=".Activity.BaseActivity" />
+        <activity android:name=".Activity.AdapterViewBaseActivity" />
+        <activity android:name=".Activity.ListView02Activity" />
+        <activity android:name=".Activity.GridView02Activity"></activity>
     </application>
 
 </manifest>
