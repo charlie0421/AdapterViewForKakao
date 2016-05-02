@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         {
             case R.id.btnAdapterListView:
-                intent = new Intent(this, AdapterListView01Activity.class);
+                intent = new Intent(this, AdapterListViewActivity.class);
                 intent.putExtra("URL", strURL);
                 startActivity(intent);
                 break;

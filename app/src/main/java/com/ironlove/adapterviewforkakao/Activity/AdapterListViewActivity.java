@@ -13,7 +13,7 @@ import com.ironlove.adapterviewforkakao.Task.ImageParseFromGettyImageTask;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.listener.PauseOnScrollListener;
 
-public class AdapterListView01Activity extends AdapterViewBaseActivity {
+public class AdapterListViewActivity extends AdapterViewBaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
