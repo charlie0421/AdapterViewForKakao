@@ -20,8 +20,12 @@ import java.util.ArrayList;
 
 public class ImageParseFromGettyImageTask extends AsyncTask<String, Void, ArrayList<GettyImage>> {
     private final String TAG = getClass().getName();
+
     private final ProgressDialog progress;
     private final Activity activity;
+    private final String wrapperElement = ".gallery-item-group.exitemrepeater";
+    private final String selectorPicture = "a .picture";
+    private final String selectorCaption = ".gallery-item-caption > p > a";
 
     public ImageParseFromGettyImageTask(AdapterViewBaseActivity activity) {
         this.activity = activity;
@@ -53,11 +57,11 @@ public class ImageParseFromGettyImageTask extends AsyncTask<String, Void, ArrayL
             String title = doc.title();
             Log.d(TAG, "Title [" + title + "]");
 
-            Elements elements = doc.select(".gallery-item-group.exitemrepeater");
+            Elements elements = doc.select(wrapperElement);
             for (Element element : elements) {
                 GettyImage item = new GettyImage();
-                Element ePicture = element.select("a .picture").first();
-                Element eCaption = element.select(".gallery-item-caption > p > a").first();
+                Element ePicture = element.select(selectorPicture).first();
+                Element eCaption = element.select(selectorCaption).first();
                 item.strURL = path + ePicture.attr("src");
                 item.strCaption = eCaption.text();
                 list.add(item);

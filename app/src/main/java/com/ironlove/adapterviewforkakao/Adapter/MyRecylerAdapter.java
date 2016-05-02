@@ -13,21 +13,20 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 
 import java.util.ArrayList;
 
-public class RecylerAdapter extends RecyclerView.Adapter<RecylerAdapter.ViewHolder> {
+public class MyRecylerAdapter extends RecyclerView.Adapter<MyRecylerAdapter.ViewHolder> {
     private ArrayList<GettyImage> mDataset;
 
-    public RecylerAdapter(ArrayList<GettyImage> myDataset) {
+    public MyRecylerAdapter(ArrayList<GettyImage> myDataset) {
         mDataset = myDataset;
     }
 
     // Create new views (invoked by the layout manager)
     @Override
-    public RecylerAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,
-                                                        int viewType) {
+    public MyRecylerAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,
+                                                          int viewType) {
         View v = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.layout_listview02, parent, false);
-        ViewHolder vh = new ViewHolder(v);
-        return vh;
+                .inflate(R.layout.layout_recyler_listview_card, parent, false);
+        return new ViewHolder(v);
     }
 
     // Replace the contents of a view (invoked by the layout manager)

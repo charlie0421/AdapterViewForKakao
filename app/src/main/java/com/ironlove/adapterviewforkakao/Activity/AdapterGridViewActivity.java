@@ -7,18 +7,18 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.Toast;
 
-import com.ironlove.adapterviewforkakao.Adapter.ArrayAdapter01Adapter;
+import com.ironlove.adapterviewforkakao.Adapter.MyArrayAdapter;
 import com.ironlove.adapterviewforkakao.R;
 import com.ironlove.adapterviewforkakao.Task.ImageParseFromGettyImageTask;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.listener.PauseOnScrollListener;
 
-public class GridView01Activity extends AdapterViewBaseActivity {
+public class AdapterGridViewActivity extends AdapterViewBaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_grid_view01);
+        setContentView(R.layout.activity_adapter_grid_view);
 
         Intent intent = getIntent();
         String strURL = intent.getStringExtra("URL");
@@ -26,8 +26,8 @@ public class GridView01Activity extends AdapterViewBaseActivity {
         task.execute(strURL);
 
         mAbsListView = (GridView) findViewById(R.id.gridview);
-        mArrayAdapter = new ArrayAdapter01Adapter(
-                mActivity, mContext, R.layout.layout_gridview01,
+        mArrayAdapter = new MyArrayAdapter(
+                mActivity, mContext, R.layout.layout_adapter_gridview_row,
                 mListData);
         mAbsListView.setAdapter(mArrayAdapter);
         mAbsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

@@ -20,11 +20,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity.ListView01Activity" />
-        <activity android:name=".Activity.GridView01Activity" />
+        <activity android:name=".Activity.AdapterListView01Activity" />
+        <activity android:name=".Activity.AdapterGridViewActivity" />
         <activity android:name=".Activity.AdapterViewBaseActivity" />
-        <activity android:name=".Activity.ListView02Activity" />
-        <activity android:name=".Activity.GridView02Activity"></activity>
+        <activity android:name=".Activity.RecyclerListViewActivity" />
+        <activity android:name=".Activity.RecyclerGridViewActivity" />
     </application>
 
 </manifest>

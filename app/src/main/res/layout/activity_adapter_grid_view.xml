@@ -3,11 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.ListView01Activity">
+    tools:context=".Activity.AdapterGridViewActivity">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recylerview"
+    <GridView
+        android:id="@+id/gridview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scrollbars="vertical" />
+        android:choiceMode="singleChoice"
+        android:numColumns="5" />
 </LinearLayout>

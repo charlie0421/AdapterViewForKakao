@@ -29,18 +29,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="AdapterView"
+        android:text="@string/string_adapterview_title"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <Button
-        android:id="@+id/btnListView01"
+        android:id="@+id/btnAdapterListView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/etURL"
         android:text="@string/string_btn_listview01" />
 
     <Button
-        android:id="@+id/btnGridView01"
+        android:id="@+id/btnAdapterGridView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="0dp"
@@ -50,17 +49,17 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="RecyclerView"
+        android:text="@string/string_recyclerview_title"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <Button
-        android:id="@+id/btnListView02"
+        android:id="@+id/btnRecylerListView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/string_btn_listview02" />
 
     <Button
-        android:id="@+id/btnGridView02"
+        android:id="@+id/btnRecylerGridView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/string_btn_gridview02" />

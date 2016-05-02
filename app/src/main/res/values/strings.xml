@@ -7,5 +7,7 @@
     <string name="string_btn_gridview02">그리드뷰(RecyclerView) 예제</string>
     <string name="string_url">URL</string>
     <string name="string_default_url">http://www.gettyimagesgallery.com/collections/archive/slim-aarons.aspx</string>
+    <string name="string_adapterview_title">AdapterView</string>
+    <string name="string_recyclerview_title">RecyclerView</string>
 
 </resources>

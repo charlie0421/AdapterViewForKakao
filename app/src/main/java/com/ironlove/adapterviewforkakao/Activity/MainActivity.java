@@ -19,10 +19,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btnListView01 = (Button) findViewById(R.id.btnListView01);
-        Button btnListView02 = (Button) findViewById(R.id.btnListView02);
-        Button btnGridView01 = (Button) findViewById(R.id.btnGridView01);
-        Button btnGridView02 = (Button) findViewById(R.id.btnGridView02);
+        Button btnListView01 = (Button) findViewById(R.id.btnAdapterListView);
+        Button btnListView02 = (Button) findViewById(R.id.btnRecylerListView);
+        Button btnGridView01 = (Button) findViewById(R.id.btnAdapterGridView);
+        Button btnGridView02 = (Button) findViewById(R.id.btnRecylerGridView);
         etURL = (EditText) findViewById(R.id.etURL);
 
         if (btnListView01 != null)
@@ -33,39 +33,38 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             btnGridView01.setOnClickListener(this);
         if (btnGridView02 != null)
             btnGridView02.setOnClickListener(this);
-
-
     }
 
     @Override
     public void onClick(View v) {
+        String strURL = etURL.getText().toString();
+        Log.d(TAG, "URL:" + strURL);
+
         Intent intent;
         switch (v.getId())
 
         {
-            case R.id.btnListView01:
-                intent = new Intent(this, ListView01Activity.class);
-                intent.putExtra("URL", etURL.getText().toString());
+            case R.id.btnAdapterListView:
+                intent = new Intent(this, AdapterListView01Activity.class);
+                intent.putExtra("URL", strURL);
                 startActivity(intent);
-                Log.d(TAG, "URL:" + etURL.getText());
                 break;
-            case R.id.btnListView02:
-                intent = new Intent(this, ListView02Activity.class);
-                intent.putExtra("URL", etURL.getText().toString());
+            case R.id.btnRecylerListView:
+                intent = new Intent(this, RecyclerListViewActivity.class);
+                intent.putExtra("URL", strURL);
                 startActivity(intent);
-                Log.d(TAG, "URL:" + etURL.getText());
                 break;
-            case R.id.btnGridView01:
-                intent = new Intent(this, GridView01Activity.class);
-                intent.putExtra("URL", etURL.getText().toString());
+            case R.id.btnAdapterGridView:
+                intent = new Intent(this, AdapterGridViewActivity.class);
+                intent.putExtra("URL", strURL);
                 startActivity(intent);
-                Log.d(TAG, "URL:" + etURL.getText());
                 break;
-            case R.id.btnGridView02:
-                intent = new Intent(this, GridView02Activity.class);
-                intent.putExtra("URL", etURL.getText().toString());
+            case R.id.btnRecylerGridView:
+                intent = new Intent(this, RecyclerGridViewActivity.class);
+                intent.putExtra("URL", strURL);
                 startActivity(intent);
-                Log.d(TAG, "URL:" + etURL.getText());
+                break;
+            default:
                 break;
         }
     }

@@ -11,8 +11,8 @@ import com.ironlove.adapterviewforkakao.Item.GettyImage;
 import java.util.ArrayList;
 
 public class AdapterViewBaseActivity extends AppCompatActivity {
-
     public final ArrayList<GettyImage> mListData = new ArrayList<>();
+    private final String TAG = getClass().getName();
     public ArrayAdapter<GettyImage> mArrayAdapter;
     AbsListView mAbsListView;
     AdapterViewBaseActivity mActivity;

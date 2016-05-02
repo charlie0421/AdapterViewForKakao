@@ -4,7 +4,6 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -15,13 +14,13 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 
 import java.util.ArrayList;
 
-public class ArrayAdapter01Adapter extends ArrayAdapter<GettyImage> {
+public class MyArrayAdapter extends android.widget.ArrayAdapter<GettyImage> {
     private final String TAG = getClass().getName();
     private final int resource;
     private final ArrayList<GettyImage> items;
 
 
-    public ArrayAdapter01Adapter(AdapterViewBaseActivity activity, Context context, int resource, ArrayList<GettyImage> items) {
+    public MyArrayAdapter(AdapterViewBaseActivity activity, Context context, int resource, ArrayList<GettyImage> items) {
         super(context, resource, items);
         this.resource = resource;
         this.items = items;
